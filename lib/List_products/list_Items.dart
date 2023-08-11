@@ -98,7 +98,7 @@ class _list_laptopState extends State<list_laptop> {
                         )));
           },
           backgroundColor: Color(0xfff123456),
-          child: Badge(
+          child: badges.Badge(
             badgeContent: Consumer<CartProvider>(
               builder: (context, value, child) {
                 return Text(
@@ -107,11 +107,12 @@ class _list_laptopState extends State<list_laptop> {
                 );
               },
             ),
-            animationDuration: Duration(milliseconds: 300),
-            child: Icon(
-              Icons.shopping_cart_checkout_rounded,
-              size: 30,
-            ),
+            badgeAnimation: badges.BadgeAnimation.rotation(
+                animationDuration: Duration(seconds: 1),
+                colorChangeAnimationDuration: Duration(seconds: 1),
+                loopAnimation: false,
+                curve: Curves.fastOutSlowIn,
+                colorChangeAnimationCurve: Curves.easeInCubic),
           ),
         ),
         appBar: AppBar(
