@@ -1,4 +1,4 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:online_mobile/widget/FLoatingbutton/cart.dart';
 import 'package:online_mobile/widget/FLoatingbutton/cart_model.dart'
@@ -8,7 +8,6 @@ import 'package:online_mobile/widget/FLoatingbutton/db_helper.dart';
 import 'package:provider/provider.dart';
 
 import '../services/notification_service.dart';
-// import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class list_laptop extends StatefulWidget {
   const list_laptop({super.key});
